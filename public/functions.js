@@ -56,6 +56,12 @@ document.querySelector("#securestop").addEventListener("click", function (event)
 
 //---------------- Device Connections ------------------------------
 
+console.log = function (message) {
+    var time = new Date();
+    time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + ": ";
+    document.getElementById("result").innerHTML += time + message + "<br>";
+};
+
 function isWebBluetoothEnabled() {
     if (!navigator.bluetooth) {
         console.log("Web Bluetooth API is not available in this browser!");
@@ -135,10 +141,7 @@ function handleSecureButtonValueChanges(event) {
 }
 
 function handleValueChange(type, value) {
-    var time = new Date();
-    console.log(
-        time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + " " + type + " value changed: " + value
-    );
+    console.log(type + " value changed: " + value);
 }
 
 //---------------- LED Service ------------------------------

@@ -36,3 +36,14 @@ button:disabled {
     color: #666666;
     cursor: not-allowed;
 }
+
+#result {
+    background-color: black;
+    color: rgb(222, 222, 222);
+    font-family: "Courier New", monospace;
+    padding: 10px;
+    border: 1px solid grey;
+    white-space: pre;
+    overflow: auto;
+    height: 400px;
+}
